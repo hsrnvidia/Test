@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img</title>
+    <style>
+    	.copy {
+    		position: relative;
+    		display: inline-block;
+    		margin: 10px;
+    	}
+    	button {
+    		position: absolute;
+    		bottom: 5px;
+    		right: 0;
+    	}
+    	textarea {
+    		height: 100px;
+    	}
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div class="copy">
+    	<textarea></textarea>
+    	<button onclick="$copy()">Копировать</button>
+    </div>
+    <input type="file" onchange="$encodeImg()" accept=".png, .jpg, .jpeg">
+    <script>
+    	const text = document.querySelector("textarea")
+	    function $encodeImg() {
+	      let files = document.querySelector("input").files
+	      if (files.length > 0) {
+	      	let fileLoad = files[0]
+		      let fileReader = new FileReader()
+		      fileReader.onload = function(fileEvent) {
+		        let srcData = fileEvent.target.result
+		        let newImage = document.createElement('img')
+		        newImage.src = srcData
+		        let img = newImage.outerHTML
+		        document.querySelector("div").innerHTML = img
+		        text.innerHTML = img
+		        console.log(img)
+		      }
+		      fileReader.readAsDataURL(fileLoad)
+	      }
+	    }
+	    function $copy() {
+	    	text.select()
+	    	document.execCommand("copy")
+	    }
+    </script>
+  </body>
+</html>

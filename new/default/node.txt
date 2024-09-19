@@ -1,0 +1,31 @@
+﻿/* libs
+jquery 3.4.1
+bootstrap 4.3.1
+fontawesome 5.10.2
+OptimizedHTML 4
+OwlCarousel 2.3.4
+gulp 4.0.2
+*/
+/* git
+  main*Имя ветки
+  origin*Имя удаленного адреса
+git merge --squash main //Соединить в один комитт
+git reset HEAD~1 --hard //Удалить до коммита
+git branch -D main //Удалить ветку локально
+git push origin --delete main //Удалить ветку удаленно
+git checkout -b"main" //Создать ветку
+git log --oneline //Журнал
+git add . //Добавить всё
+git commit -m"text" //Коментарий
+git commit --amend //Изменить прошлый коммит
+git stash clear<or pop> //Очистить<или извлечь> буфер git
+git pull origin main --rebase //Перизаписать
+git remote add origin url // Добавит url
+git status // Проверка
+git clone --branch=main url // Клонировать ветку
+*/
+/* link
+iqdb.org
+trace.moe
+app.netlify.com
+raw.githack.com

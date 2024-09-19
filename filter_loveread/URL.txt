@@ -1,0 +1,5 @@
+https://raw.githack.com/
+=>
+url github book.min.js
+=
+https://rawcdn.githack.com/Mirror45/new/1ad21226a89c1422a5c1ae8ba59f1acce75f60f8/book.min.js
